@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 // Redireciona para o painel principal (aplicação) após 1 segundo
                 setTimeout(() => {
-                    window.location.href = 'https://lucasfreitas19.github.io/PUCRS/APP/index.html';
+                    window.location.href = '../APP/index.html';
                 }, 1000);
                 
             }, 2000);
