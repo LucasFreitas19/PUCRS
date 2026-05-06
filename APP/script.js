@@ -57,20 +57,65 @@ function toggleSidebar(forceClose = false) {
 }
 
 // --- 4. Exibir Audio-book ---
-function toggleAudio() {
-    const container = document.getElementById('audio-container');
-    container.classList.toggle('d-none');
+function toggleAudio(livroId) {
+    const container = document.getElementById(`audio-container-${livroId}`);
+    if(container) {
+        container.classList.toggle('d-none');
+    }
 }
 
 // --- 5. Lógica da Newsletter Dinâmica ---
-function carregarMateria(titulo, imagem) {
+
+// Nosso "Banco de Dados" de matérias do blog
+// --- 5. Newsletter Atualizada (Ambos Lançados) ---
+const conteudosBlog = {
+    'materia1': `
+        <p><strong>O início de tudo!</strong> <em>Corte de Espinhos e Rosas</em> não é apenas um livro, é o portal para um dos fandoms mais apaixonados da atualidade. Se você procura uma mistura de sobrevivência, magia e um romance que subverte expectativas, este é o seu lugar.</p>
+        <p>Acompanhe Feyre em sua transição do mundo humano para as perigosas cortes feéricas. A resenha escrita e o audiobook já estão liberados para todos os membros!</p>
+    `,
+    'materia2': `
+        <p><strong>A sequência que parou o mundo!</strong> Muitos dizem que o primeiro livro é apenas o 'prolongamento do prólogo' e que a verdadeira história começa em <em>Corte de Névoa e Fúria</em>. </p>
+        <p>Agora que ambos os títulos estão no nosso catálogo, você pode fazer aquela maratona épica. Descubra por que a Corte Noturna mudou a forma como enxergamos os heróis de fantasia. Confira a análise completa na aba do livro!</p>
+    `
+};
+
+// --- Novo: Banco de Resenhas Escritas ---
+const conteudosResenhas = {
+    1: {
+        titulo: "Resenha: Corte de Espinhos e Rosas",
+        texto: `
+            <h4 class="fw-bold mb-3">O despertar de uma caçadora</h4>
+            <p>O primeiro volume da saga nos apresenta uma Feyre endurecida pela miséria. A narrativa brilha ao mostrar que ela não é uma 'donzela em perigo', mas uma sobrevivente que sacrifica sua humanidade pela família.</p>
+            <p>O clima na Corte Primaveril é repleto de tensão e mistério devido à maldição de Amarantha. O destaque vai para as provas 'Sob a Montanha', onde a escrita de Sarah J. Maas se torna crua e visceral, provando que este não é um conto de fadas comum.</p>
+            <p class="fw-bold">Veredito: Uma introdução sólida que prepara o terreno para algo muito maior.</p>
+        `
+    },
+    2: {
+        titulo: "Resenha: Corte de Névoa e Fúria",
+        texto: `
+            <h4 class="fw-bold mb-3">A cura através da liberdade</h4>
+            <p>Se o primeiro livro foi sobre sobrevivência física, o segundo é sobre sobrevivência emocional. Acompanhamos Feyre lidando com o estresse pós-traumático e descobrindo que o amor não deve ser uma gaiola, mesmo que seja de ouro.</p>
+            <p>A introdução do Círculo Íntimo e a exploração de Velaris elevam o nível da série. Rhysand se prova um dos personagens mais complexos da literatura fantástica moderna, movendo as peças de um tabuleiro político milenar.</p>
+            <p class="fw-bold">Veredito: Uma obra-prima do gênero 'Romantasy' que supera o original em todos os aspectos.</p>
+        `
+    }
+};
+
+function carregarMateria(titulo, imagem, idMateria) {
     document.getElementById('modal-blog-titulo').innerText = titulo;
+    document.getElementById('modal-blog-img').src = imagem;
+    document.getElementById('texto-da-materia').innerHTML = conteudosBlog[idMateria];
+}
+
+// --- Função para abrir a resenha correta ---
+function abrirResenha(idLivro) {
+    const resenha = conteudosResenhas[idLivro];
+    document.getElementById('resenha-titulo').innerText = resenha.titulo;
+    document.getElementById('resenha-corpo').innerHTML = resenha.texto;
     
-    const imgElement = document.getElementById('modal-blog-img');
-    imgElement.src = imagem;
-    imgElement.onerror = function() {
-        this.src = 'https://via.placeholder.com/800x400?text=' + encodeURI(titulo);
-    };
+    // Abre o modal via JavaScript
+    var meuModal = new bootstrap.Modal(document.getElementById('resenhaModal'));
+    meuModal.show();
 }
 // --- 6. Lógica de Favoritar Livro ---
 function favoritar(botao) {
