@@ -1,0 +1,178 @@
+/* Importação não estritamente necessária aqui pois já está no HTML, mas serve de fallback */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Nossas Cores e Tipografia */
+:root {
+    --cor-principal: #ea5d1c;
+    --cor-secundaria: #f7f7f5;
+    --cor-escura: #33413F;
+    --cor-escura-hover: #26312f;
+}
+
+body {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-escura);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400; /* Peso normal para leitura */
+    overflow-x: hidden;
+}
+
+/* Tipografia Específica */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700; /* Títulos bem demarcados */
+}
+
+.text-principal { color: var(--cor-principal) !important; }
+.text-escura { color: var(--cor-escura) !important; }
+
+/* Estilização de Botões e Elementos Globais */
+.btn-principal {
+    background-color: var(--cor-principal);
+    color: var(--cor-secundaria);
+    border: none;
+    transition: 0.3s;
+}
+.btn-principal:hover {
+    background-color: #cf4f15;
+    color: var(--cor-secundaria);
+}
+
+.btn-outline-escura {
+    border: 1px solid var(--cor-escura);
+    color: var(--cor-escura);
+    transition: 0.3s;
+}
+.btn-outline-escura:hover {
+    background-color: var(--cor-escura);
+    color: var(--cor-secundaria);
+}
+
+.cursor-pointer { cursor: pointer; }
+
+/* Views (SPA) */
+.view-section { display: none; }
+.view-section.active { display: block; }
+.tab-content { display: none; }
+.tab-content.active { display: block; animation: fadeIn 0.4s; }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* Login */
+#login-view {
+    height: 100vh;
+    /* Removemos o display: flex daqui para não forçar a tela a ficar visível */
+}
+
+#login-view.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-card {
+    max-width: 400px; 
+    width: 100%; 
+    background-color: white; 
+    border-radius: 15px;
+}
+.logo-login {
+    height: 60px; 
+    object-fit: contain;
+}
+
+/* Layout Principal */
+.sidebar {
+    width: 280px;
+    background-color: #ffffff;
+    border-right: 1px solid #e0e0e0;
+    height: 100vh;
+    position: fixed;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.main-content {
+    margin-left: 280px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Navegação */
+.nav-link {
+    color: var(--cor-escura);
+}
+.nav-link.active.nav-link-custom {
+    background-color: var(--cor-principal) !important;
+    color: white !important;
+}
+
+/* Responsividade para Mobile */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        transition: 0.3s;
+    }
+    .sidebar.show {
+        transform: translateX(0);
+    }
+    .main-content {
+        margin-left: 0;
+    }
+    .mobile-overlay {
+        display: none;
+        position: fixed;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 999;
+    }
+    .mobile-overlay.show { display: block; }
+}
+.logo-sidebar {
+    height: 45px; /* Altura fixa e discreta */
+    width: auto;
+    object-fit: contain;
+}
+
+/* Cards do Livro */
+.book-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+.book-video-placeholder {
+    background-color: var(--cor-escura);
+    height: 180px; /* Mantém a altura padronizada */
+    overflow: hidden; /* Garante que o vídeo não vaze */
+    border-bottom: 3px solid var(--cor-principal); 
+}
+
+.book-video-placeholder video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz o vídeo preencher o espaço como uma "capa" */
+}
+
+/* Altura fixa para os títulos dos livros */
+.book-title {
+    min-height: 48px; 
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Se o título for gigante, coloca "..." no final */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+/* Footer */
+footer {
+    background-color: var(--cor-escura);
+    color: var(--cor-secundaria);
+}
+
+/* Modals */
+.modal-bg-secundaria {
+    background-color: var(--cor-secundaria);
+}
+.modal-blog-img-custom {
+    max-height: 400px; 
+    object-fit: cover;
+}
