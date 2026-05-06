@@ -1,0 +1,144 @@
+/* =========================================
+   ESTILOS ESPECÍFICOS DA LANDING PAGE
+========================================= */
+
+/* Color Blocking Sections */
+.bg-laranja { 
+    background-color: var(--cor-principal, #ea5d1c); 
+    color: var(--cor-secundaria, #f7f7f5); 
+}
+.bg-escura { 
+    background-color: var(--cor-escura, #33413F); 
+    color: var(--cor-secundaria, #f7f7f5); 
+}
+.bg-clara { 
+    background-color: var(--cor-secundaria, #f7f7f5); 
+    color: var(--cor-escura, #33413F); 
+}
+
+/* Animações de Scroll */
+.reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s ease-out; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+.reveal-left { opacity: 0; transform: translateX(-40px); transition: all 0.8s ease-out; }
+.reveal-left.active { opacity: 1; transform: translateX(0); }
+.reveal-right { opacity: 0; transform: translateX(40px); transition: all 0.8s ease-out; }
+.reveal-right.active { opacity: 1; transform: translateX(0); }
+
+/* Hero Section */
+.hero-section {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Marca d'água / Símbolo Decorativo */
+.watermark-simbolo {
+    position: absolute;
+    opacity: 0.08;
+    width: 350px;
+    right: -50px;
+    bottom: -50px;
+    pointer-events: none;
+}
+
+/* Botão Escuro - Para Fundo Laranja */
+.btn-cta-dark {
+    background-color: var(--cor-escura, #33413F);
+    color: #ffffff; /* Forçando cor branca para garantir leitura */
+    padding: 16px 45px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    font-weight: 700;
+    border: 2px solid var(--cor-escura, #33413F);
+    transition: 0.4s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.btn-cta-dark:hover {
+    background-color: transparent;
+    color: var(--cor-escura, #33413F); /* No hover vira escuro pois o fundo é branco no card */
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* NOVA CLASSE: Botão Vazado de Preços (Corrige o branco no branco) */
+.btn-pricing-outline {
+    background-color: transparent;
+    color: var(--cor-escura, #33413F);
+    padding: 14px 40px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    font-weight: 700;
+    border: 2px solid var(--cor-escura, #33413F);
+    transition: 0.4s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.btn-pricing-outline:hover {
+    background-color: var(--cor-escura, #33413F);
+    color: #ffffff !important; /* Força que o texto fique branco e o fundo escuro */
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.hover-text-principal:hover {
+    color: var(--cor-principal, #ea5d1c) !important;
+}
+
+/* Cards de Benefícios (Pilares) */
+.pillar-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px 30px;
+    height: 100%;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+.pillar-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 5px;
+    background-color: var(--cor-principal, #ea5d1c);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.4s;
+}
+.pillar-card:hover::before { transform: scaleX(1); }
+.pillar-card:hover { transform: translateY(-10px); }
+
+.pillar-icon {
+    font-size: 2.5rem;
+    color: var(--cor-principal, #ea5d1c);
+    margin-bottom: 25px;
+}
+
+/* Tabela de Preços (Pricing) */
+.pricing-card {
+    border-radius: 24px;
+    padding: 50px 40px;
+    position: relative;
+    transition: 0.3s;
+    border: none;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+.pricing-card.destaque {
+    transform: scale(1.05);
+    border: 3px solid var(--cor-escura, #33413F);
+    z-index: 2;
+}
+.pricing-card:hover { transform: translateY(-10px); }
+.pricing-card.destaque:hover { transform: scale(1.05) translateY(-10px); }
+
+.price-value { font-size: 3.5rem; font-weight: 800; line-height: 1; }
+.price-moeda { font-size: 1.5rem; font-weight: 600; color: #888; vertical-align: top; }
+
+.list-benefits li {
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}

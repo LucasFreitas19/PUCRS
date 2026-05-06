@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Índice | Clube Literário</title>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- CSS Principal do Sistema e Específico da Landing Page -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+
+    <!-- HERO SECTION (Color Block: Laranja) -->
+    <header class="hero-section bg-laranja">
+        <div class="container position-relative z-1">
+            <div class="row align-items-center min-vh-100 py-5">
+                <div class="col-lg-6 reveal-left">
+                    <!-- Logo Versão Branca Completa com o novo caminho -->
+                    <img src="../Logos/LOGO INDICE-09.png" alt="Índice Clube Literário" class="mb-5" height="65">
+                    
+                    <h1 class="display-3 fw-bold mb-4 text-white lh-sm">
+                        Não leia sozinho. <br>Viva a história.
+                    </h1>
+                    <p class="fs-5 mb-5 text-white opacity-75 fw-light lh-lg pe-lg-5">
+                        Junte-se ao clube literário que transforma a leitura em uma experiência coletiva e imersiva. Resenhas guiadas, acervo digital, debates com autores e uma comunidade apaixonada.
+                    </p>
+                    
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#planos" class="btn btn-cta-dark">Ver Planos</a>
+                        <a href="#beneficios" class="btn text-white fw-medium px-4 py-3 border-0">Descubra como <i class="fas fa-arrow-down ms-2"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 d-none d-lg-block reveal-right text-center mt-5 mt-lg-0 position-relative">
+                    <!-- Símbolo (Bolinhas) como detalhe de fundo -->
+                    <img src="../Logos/LOGO INDICE-09.png" class="watermark-simbolo" alt="Símbolo Índice" style="filter: brightness(0) invert(1);">
+                    
+                    <!-- Imagem principal do Hero -->
+                    <div class="position-relative">
+                        <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=800&auto=format&fit=crop" class="img-fluid rounded-4 shadow-lg border border-3 border-white" alt="Comunidade do Livro">
+                        
+                        <!-- Flutuante Atualizado (Sem vídeo) -->
+                        <div class="position-absolute bg-white p-4 rounded-4 shadow-lg text-start" style="bottom: -20px; left: -40px;">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="bg-laranja rounded-circle p-3 text-white d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                    <i class="fas fa-book-open fs-5"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-0 fw-bold" style="color: #33413F;">Expêriencia de Leitura Completa</h5>
+                                    <small class="text-muted fw-medium">Compartilhe histórias</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- PILARES / BENEFÍCIOS (Color Block: Clara) -->
+    <section id="beneficios" class="py-5 bg-clara">
+        <div class="container py-5">
+            <div class="text-center mb-5 reveal">
+                <h2 class="fw-bold display-5 mb-3" style="color: #33413F;">Sua nova rotina de leitura</h2>
+                <p class="text-muted fs-5">Desenhamos uma metodologia para que você extraia o máximo de cada página lida.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="pillar-card">
+                        <i class="fas fa-brain pillar-icon"></i>
+                        <h4 class="fw-bold mb-3" style="color: #33413F;">Conteúdo de Especializado</h4>
+                        <p class="text-muted lh-lg mb-0">Assista aos nossos vídeos de resenha que aprofundam a compreensão das obras lidas juntos.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="pillar-card">
+                        <i class="fas fa-cloud-download-alt pillar-icon"></i>
+                        <h4 class="fw-bold mb-3" style="color: #33413F;">Acervo Ilimitado</h4>
+                        <p class="text-muted lh-lg mb-0">Nossa plataforma é atualizada semanalmente. O livro que você deseja, direto para você.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="pillar-card">
+                        <i class="fas fa-users pillar-icon"></i>
+                        <h4 class="fw-bold mb-3" style="color: #33413F;">Fórum Exclusivo</h4>
+                        <p class="text-muted lh-lg mb-0">Transforme a leitura solitária em pertencimento. Debata teorias, surtos e crie laços no nosso espaço seguro.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 reveal">
+                    <div class="pillar-card d-flex align-items-center gap-4 h-100">
+                        <div class="bg-laranja bg-opacity-10 p-4 rounded-circle">
+                            <i class="fas fa-video fs-1 text-principal mb-0"></i>
+                        </div>
+                        <div>
+                            <h4 class="fw-bold mb-2" style="color: #33413F;">Conexão com Autores</h4>
+                            <p class="text-muted mb-0">Participe de eventos online e debates ao vivo com quem escreveu suas obras favoritas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 reveal">
+                    <div class="pillar-card d-flex align-items-center gap-4 h-100">
+                        <div class="bg-laranja bg-opacity-10 p-4 rounded-circle">
+                            <i class="fas fa-box-open fs-1 text-principal mb-0"></i>
+                        </div>
+                        <div>
+                            <h4 class="fw-bold mb-2" style="color: #33413F;">Box Literário Mensal</h4>
+                            <p class="text-muted mb-0">Assinantes anuais recebem em casa livros físicos e itens de papelaria colecionáveis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROVA SOCIAL (Color Block: Escuro) -->
+    <section class="py-5 bg-escura position-relative overflow-hidden">
+        <!-- Logo cortado no fundo -->
+        <img src="../Logos/LOGO INDICE-04.png" class="position-absolute opacity-10" style="right: 5%; top: 10%; width: 200px; filter: brightness(0) invert(1);" alt="">
+        
+        <div class="container py-5 reveal position-relative z-1">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-5 mb-lg-0 text-white">
+                    <h2 class="fw-bold mb-4 display-5">Um refúgio para leitores.</h2>
+                    <p class="text-white-50 fs-5 mb-4">Mais do que assinantes, somos uma rede de pessoas que buscam desacelerar e viver histórias com profundidade.</p>
+                    
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="d-flex text-warning fs-3">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <!-- Nota corrigida para 5.0 -->
+                        <h4 class="mb-0 fw-bold text-white">5.0/5.0</h4>
+                    </div>
+                    <p class="text-white-50 mt-2">Mais de 2.000 avaliações no fórum</p>
+                </div>
+                
+                <div class="col-lg-7">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="bg-white p-4 rounded-4 shadow h-100">
+                                <i class="fas fa-quote-left fs-3 text-principal mb-3 opacity-50"></i>
+                                <!-- Cor forçada em HEX para evitar o bug do branco-no-branco -->
+                                <p class="fst-italic fw-medium" style="color: #33413F;">"As resenhas antes da leitura abriram minha mente. Eu entendi nuances que jamais perceberia lendo sozinha."</p>
+                                <hr>
+                                <h6 class="fw-bold text-principal mb-0">Mariana Silva</h6>
+                                <small class="text-muted">Assinante Anual</small>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mt-md-5">
+                            <div class="bg-white p-4 rounded-4 shadow h-100">
+                                <i class="fas fa-quote-left fs-3 text-principal mb-3 opacity-50"></i>
+                                <p class="fst-italic fw-medium" style="color: #33413F;">"Os itens de papelaria que chegam com o box são lindos. Mas o fórum se tornou meu lugar favorito na internet."</p>
+                                <hr>
+                                <h6 class="fw-bold text-principal mb-0">Pedro Henrique</h6>
+                                <small class="text-muted">Membro há 8 meses</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLANOS / PRICING (Color Block: Laranja Forte) -->
+    <section id="planos" class="py-5 bg-laranja position-relative">
+        <div class="container py-5">
+            <div class="text-center mb-5 reveal text-white">
+                <h2 class="fw-bold display-5 mb-3 text-white">Escolha sua jornada</h2>
+                <p class="text-white opacity-75 fs-5">Planos flexíveis que se adaptam ao seu ritmo e vontade de imersão.</p>
+            </div>
+
+            <div class="row g-4 justify-content-center align-items-center">
+                
+                <!-- Mensal -->
+                <div class="col-md-6 col-lg-4 reveal-left">
+                    <div class="pricing-card text-center bg-white">
+                        <h4 class="fw-bold text-principal text-uppercase mb-2">Mensal</h4>
+                        <p class="text-muted fw-medium mb-4">Para explorar e conhecer</p>
+                        
+                        <!-- Cor forçada -->
+                        <div class="mb-4" style="color: #33413F;">
+                            <span class="price-moeda">R$</span><span class="price-value">39<small class="fs-4">,90</small></span><span class="text-muted fw-bold">/mês</span>
+                        </div>
+                        
+                        <ul class="list-unstyled text-start mb-5 list-benefits" style="color: #33413F;">
+                            <li><i class="fas fa-check-circle text-success me-2"></i> Acesso livre ao Fórum</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> Download do Acervo</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> Vídeos de Resenhas</li>
+                            <li class="text-muted opacity-50"><i class="fas fa-times-circle me-2"></i> Box Físico e Papelaria</li>
+                        </ul>
+                        <!-- Classe nova de botão aplicada -->
+                        <button class="btn-pricing-outline w-100">Assinar Mensal</button>
+                    </div>
+                </div>
+
+                <!-- Anual (Destaque Central) -->
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="pricing-card destaque text-center bg-white position-relative">
+                        <div class="badge text-white position-absolute top-0 start-50 translate-middle px-4 py-2 rounded-pill fw-bold fs-6 shadow" style="background-color: #33413F;">
+                            A Experiência Completa
+                        </div>
+                        <h4 class="fw-bold text-principal text-uppercase mb-2 mt-3">Anual</h4>
+                        <p class="text-muted fw-medium mb-4">A imersão que você merece</p>
+                        
+                        <div class="mb-4" style="color: #33413F;">
+                            <span class="price-moeda">R$</span><span class="price-value">406<small class="fs-4">,90</small></span><span class="text-muted fw-bold">/ano</span>
+                        </div>
+                        
+                        <ul class="list-unstyled text-start mb-5 list-benefits fw-medium" style="color: #33413F;">
+                            <li><i class="fas fa-check-circle text-success me-2"></i> <strong>Todos os benefícios online</strong></li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> Box com livro físico mensal</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> Papelaria exclusiva Índice</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> <strong>2 meses grátis (Economia)</strong></li>
+                        </ul>
+                        <button class="btn btn-cta-dark w-100 shadow-lg">Assinar Anual</button>
+                    </div>
+                </div>
+
+                <!-- Semestral -->
+                <div class="col-md-6 col-lg-4 reveal-right">
+                    <div class="pricing-card text-center bg-white">
+                        <h4 class="fw-bold text-principal text-uppercase mb-2">Semestral</h4>
+                        <p class="text-muted fw-medium mb-4">Compromisso a médio prazo</p>
+                        
+                        <div class="mb-4" style="color: #33413F;">
+                            <span class="price-moeda">R$</span><span class="price-value">215<small class="fs-4">,00</small></span><span class="text-muted fw-bold">/sem.</span>
+                        </div>
+                        
+                        <ul class="list-unstyled text-start mb-5 list-benefits" style="color: #33413F;">
+                            <li><i class="fas fa-check-circle text-success me-2"></i> Acesso livre ao Fórum</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> Download do Acervo</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> Encontros com Autores</li>
+                            <li class="text-muted opacity-50"><i class="fas fa-times-circle me-2"></i> Box Físico e Papelaria</li>
+                        </ul>
+                        <button class="btn-pricing-outline w-100">Assinar Semestral</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-5 bg-escura text-white border-top border-secondary border-opacity-25">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-4">
+                <div class="d-flex align-items-center">
+                    <img src="../Logos/LOGO INDICE-02.png" alt="Logo Índice" height="50">
+                </div>
+                <div class="text-center text-md-start">
+                    <p class="mb-1 fw-light text-white-50">Uma experiência literária completa.</p>
+                    <small class="fw-light text-white-50">© 2026 Índice Clube Literário. Todos os direitos reservados.</small>
+                </div>
+                <div class="d-flex gap-3">
+                    <a href="https://www.instagram.com/indice.club/?hl=pt-br" target="_blank" class="text-white text-opacity-75 fs-3" style="transition: 0.3s;"><i class="fab fa-instagram hover-text-principal"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Script Próprio da Landing Page -->
+    <script src="landing.js"></script>
+</body>
+</html>
