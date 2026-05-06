@@ -1,0 +1,64 @@
+/* Estilos Específicos para o Checkout */
+body {
+    background-color: var(--cor-secundaria, #f7f7f5);
+}
+
+.checkout-container {
+    max-width: 900px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.card-checkout {
+    background: #ffffff;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    padding: 30px;
+}
+
+.form-control {
+    border-radius: 10px;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+}
+
+.form-control:focus {
+    border-color: var(--cor-principal, #ea5d1c);
+    box-shadow: 0 0 0 0.2rem rgba(234, 93, 28, 0.25);
+}
+
+.btn-pagar {
+    background-color: var(--cor-escura, #33413F);
+    color: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-pagar:hover {
+    background-color: var(--cor-principal, #ea5d1c);
+    transform: translateY(-2px);
+}
+
+/* --- ATUALIZAÇÃO DO CARRINHO (Mais respiro) --- */
+.resumo-pedido {
+    background-color: var(--cor-escura, #33413F);
+    color: white;
+    border-radius: 24px; /* Bordas um pouco mais arredondadas e suaves */
+    padding: 45px 40px;  /* Aumentamos bastante o respiro interno (topo/base e laterais) */
+}
+
+.resumo-pedido .text-muted {
+    color: rgba(255,255,255,0.6) !important;
+    line-height: 1.8; /* Melhora a leitura do texto menor */
+}
+
+.divider {
+    border-top: 1px dashed rgba(255,255,255,0.2);
+    margin: 30px 0; /* Aumenta o espaço vazio acima e abaixo da linha pontilhada */
+}
