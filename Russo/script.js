@@ -50,3 +50,18 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+// --- Inicialização do Masonry.js (Bloco 3) ---
+    const grid = document.querySelector('.grid-container');
+    
+    if (grid) {
+        // imagesLoaded garante que o grid só seja montado após baixar as fotos
+        imagesLoaded(grid, function() {
+            new Masonry(grid, {
+                itemSelector: '.grid-item', // Seleciona as fotos
+                columnWidth: '.grid-sizer', // Usa a nossa régua invisível
+                percentPosition: true, // Mantém a responsividade ativada
+                gutter: 20 // Adiciona o espaçamento horizontal (gap)
+            });
+        });
+    }
