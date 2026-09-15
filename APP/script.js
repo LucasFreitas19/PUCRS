@@ -1,16 +1,16 @@
 // --- 1. Lógica de Login Fake ---
-function fazerLogin() {
-    const userNameInput = document.getElementById('login-user').value;
-    const nomeUsuario = userNameInput.trim() !== "" ? userNameInput : "Leitor Oculto";
+// function fazerLogin() {
+   // const userNameInput = document.getElementById('login-user').value;
+   // const nomeUsuario = userNameInput.trim() !== "" ? userNameInput : "Leitor Oculto";
     
     // Atualiza os nomes na interface
-    document.getElementById('display-username').innerText = nomeUsuario;
-    document.getElementById('perfil-nome').innerText = nomeUsuario;
+   // document.getElementById('display-username').innerText = nomeUsuario;
+   // document.getElementById('perfil-nome').innerText = nomeUsuario;
 
     // Transição de Views
-    document.getElementById('login-view').classList.remove('active');
-    document.getElementById('app-view').classList.add('active');
-}
+   // document.getElementById('login-view').classList.remove('active');
+   // document.getElementById('app-view').classList.add('active');
+//}
 
 // --- 2. Lógica de Abas (Navegação Interna) ---
 function mudarAba(idAba, elementoClicado) {
